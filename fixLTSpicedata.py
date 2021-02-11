@@ -9,7 +9,6 @@
 # Developer: P.Zahedi
 # E-mail: p.zahedi@live.com
 
-import matplotlib.pyplot as plt
 import numpy as np
 import sys
 
