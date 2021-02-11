@@ -1,6 +1,5 @@
 # Fix-LTSpice-output-data
 
-Laus deo
 LTSpice is a free opensource tool for simulating digital and analog circuit. But after saveing the result of simulation, the software 
 choose an unknown and unconstant sampleling frequency during the simulation.
 During my search it's an unsolved problem for long times. So I wrote this script to fix the LTSpice output data witch I used it in my ML works. 
