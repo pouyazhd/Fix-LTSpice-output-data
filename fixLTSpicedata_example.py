@@ -33,8 +33,11 @@ if __name__ == "__main__":
     DownsampleNum=int(sys.argv[2])
     FixedFileAddress='Fixed/'+sys.argv[1]
 
+    # read data
+    SampleData=np.loadtxt(FileAddress,dtype=float)
+    
     # fix (inter polate and downsample the dataset file)
-    FixedResult = LTfixer.UniformSteps(FileAddress,DownsampleNum)
+    FixedResult = LTfixer.UniformSteps(SampleData,DownsampleNum)
     
     # save fixed data
     LTfixer.SavedUniformedData(FixedFileAddress,FixedResult)

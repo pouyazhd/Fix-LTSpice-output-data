@@ -22,17 +22,16 @@ E-mail: p.zahedi@live.com
 import numpy as np
 from scipy.interpolate import interp1d
 
+
+
      # interpolate 
-     
-def UniformSteps(DataFileAddress,TimeSteps=200,kind='linear'):
-    # read data file
+def UniformSteps(SampleData,TimeSteps=200,kind='linear'):
     '''
-    DataFileAddress : address of .txt data file.
+    SampleData : array of none uniform distributed data of time, input and target.
     TimeSteps: number of output steps, default 200 row of data will generate.
     kind: interpolation kind. defulat is linear but it can be 'nearest' , 'cubic' or etc. (look at scypy documents).
     '''    
-    SampleData=np.loadtxt(DataFileAddress,dtype=float)
- 
+     
     #interpolate data
     input_interpolate=interp1d(SampleData[:,0],SampleData[:,1],kind=kind)
     output_interpolate=interp1d(SampleData[:,0],SampleData[:,2],kind=kind)
