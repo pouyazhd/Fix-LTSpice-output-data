@@ -37,4 +37,4 @@ if __name__ == "__main__":
     FixedResult = LTfixer.UniformSteps(FileAddress,DownsampleNum)
     
     # save fixed data
-    LTfixer.sa
+    LTfixer.SavedUniformedData(FixedFileAddress,FixedResult)
